@@ -1,0 +1,10 @@
+name: hello world
+on:
+    push:
+        branches: [main]
+jobs:
+    say-hello:
+        runs-on: ubuntu-latest
+        steps:
+            - run: echo "TODAY=$ (date +%y-%m-%d) " >> $GITHUB ENV
+            - run: echo Hello world, today is $TODAY
