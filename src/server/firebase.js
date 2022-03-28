@@ -7,7 +7,8 @@ const firebaseConfig = {
 };
 
 firebase.initializeApp(firebaseConfig);
-var dbRef = firebase.database().ref();
+let dbRef = firebase.database().ref();
+export let connectedRef = firebase.database().ref('.info/connected');
 
 export const userName = prompt('What your name?');
 
